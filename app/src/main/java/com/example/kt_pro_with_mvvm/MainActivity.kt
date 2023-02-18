@@ -20,24 +20,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-
+        binding.lifecycleOwner = this
 //*****************************1st way for click*********************************************************//
 
-//        mainViewModel.quoteLiveData.observe(this, Observer {
-//            binding.setValueText.text = it
-//        })
-//// simple btn click using @id in xml  android:id="@+id/nextBtn"
-//        binding.nextBtn.setOnClickListener {
-//            mainViewModel.updateQuote()
-//        }
+        mainViewModel.quoteLiveData.observe(this, Observer {
+            binding.setValueText.text = it
+        })
+// simple btn click using @id in xml  android:id="@+id/nextBtn"
+        binding.nextBtn.setOnClickListener {
+            mainViewModel.updateQuote()
+        }
 
 // ****************************2nd way for click*********************************************************//
 
         // mainViewModel xml mai data variable kaa name hai (yaha pe btn click pe method ko call krwa kr data update kr rhe hai)
-        binding.mainViewModel = mainViewModel
+//        binding.mainViewModel = mainViewModel
         // one way binding k liye @{} use krna padta hai android:text="@{mainViewModel.quoteLiveData}"
         // jab ki two way binding k @={} use hota hai (yaha pe textview pe data set kr rahe hai)
-        binding.lifecycleOwner = this
 
 //***************************Simple-one-activity-to-2nd-activity-click-in-Kotlin************************//
 

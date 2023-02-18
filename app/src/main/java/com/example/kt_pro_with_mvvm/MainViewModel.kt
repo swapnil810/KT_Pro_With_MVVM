@@ -5,10 +5,9 @@ import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
 
-    val quoteLiveData = MutableLiveData("swapnil_hhhh")
-
+    val quoteLiveData = MutableLiveData("mutable live data what is done or what is not done")
     fun updateQuote(){
-        quoteLiveData.value = "harshu"
+        quoteLiveData.value = "updateQuate method"
     }
 
 }
