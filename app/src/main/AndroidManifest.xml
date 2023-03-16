@@ -14,10 +14,19 @@
         android:theme="@style/Theme.KT_Pro_With_MVVM"
         tools:targetApi="31">
         <activity
-            android:name=".BuntyActivity"
-            android:exported="false" />
+            android:name=".activity.RetrofitActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.LogInActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BuntyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
