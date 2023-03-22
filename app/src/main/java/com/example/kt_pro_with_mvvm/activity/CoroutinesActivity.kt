@@ -42,13 +42,14 @@ class CoroutinesActivity : AppCompatActivity() {
     //Example Using courtin thread
     fun doAction(view: View) {
         CoroutineScope(Dispatchers.IO).launch {
-            Log.d("Coroutines_Coroutine", Thread.currentThread().name)
+            Log.d("CoroutineScope", Thread.currentThread().name)
+            executeLongRunningTask()
         }
         GlobalScope.launch(Dispatchers.Main) {
-            Log.d("Coroutines_Global_S", Thread.currentThread().name)
+            Log.d("GlobalScope", Thread.currentThread().name)
         }
         MainScope().launch(Dispatchers.Default) {
-            Log.d("Coroutines_MainScop", Thread.currentThread().name)
+            Log.d("MainScope", Thread.currentThread().name)
         }
     }
 
