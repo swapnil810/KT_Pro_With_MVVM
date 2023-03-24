@@ -32,6 +32,7 @@ class CustomAdapter(private val mList: List<ItemsViewModel>, val context: Contex
         holder.imageView.setImageResource(ItemsViewModel.image)
         holder.textView.text = ItemsViewModel.text
 
+
      //   holder.llayout.setOnClickListener(View.OnClickListener {
 
    //         Toast.makeText(context, "item_count: $position", Toast.LENGTH_SHORT).show()
