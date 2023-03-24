@@ -17,16 +17,13 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         homeActivityBinding = DataBindingUtil.setContentView(this, R.layout.activity_home)
         homeActivityBinding.lifecycleOwner = this
-
         var emails = intent.getStringExtra("email")
         var passw = intent.getStringExtra("pass")
-
         Toast.makeText(applicationContext, "email_id : $emails", Toast.LENGTH_SHORT).show()
         Toast.makeText(applicationContext, "passw : $passw", Toast.LENGTH_SHORT).show()
 
 
         loadFragment(FirstFragment(emails,passw))
-
         homeActivityBinding.bottomNavigationView.setOnItemSelectedListener {
 
             val fragment = when (it.itemId) {
