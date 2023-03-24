@@ -7,7 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.kt_pro_with_mvvm.R
+import com.example.kt_pro_with_mvvm.adapter.CustomAdapter
+import com.example.kt_pro_with_mvvm.models.ItemsViewModel
 
 class FirstFragment(emails: String?, passw: String?) : Fragment() {
     var e = emails.toString()
@@ -22,6 +26,16 @@ class FirstFragment(emails: String?, passw: String?) : Fragment() {
         val tvSec = view.findViewById(R.id.tvSec) as TextView
         tvEmail.text = e
         tvSec.text = p
+
+        val rvFF = view.findViewById(R.id.rvFirstFragment) as RecyclerView
+        rvFF.layoutManager = LinearLayoutManager(context)
+        val data = ArrayList<ItemsViewModel>()
+        for (i in 1..20) {
+            data.add(ItemsViewModel(R.drawable.baseline_5k_24, "Item " + i))
+        }
+        val adapter = context?.let { CustomAdapter(data, it) }
+        rvFF.adapter = adapter
+
     }
 
 }

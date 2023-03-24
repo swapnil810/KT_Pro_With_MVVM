@@ -10,7 +10,6 @@ import com.example.kt_pro_with_mvvm.R
 
 class MvvmFragment : Fragment() {
 
-
     companion object {
         fun newInstance() = MvvmFragment()
     }
@@ -18,9 +17,7 @@ class MvvmFragment : Fragment() {
     private lateinit var viewModel: MvvmViewModel
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_mvvm, container, false)
     }
 

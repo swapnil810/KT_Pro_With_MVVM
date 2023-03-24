@@ -13,7 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KT_Pro_With_MVVM"
         tools:targetApi="31">
-
+        <activity
+            android:name=".activity.SeekBarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ShowUserDetailsActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.HomeActivity"
             android:exported="false" />
