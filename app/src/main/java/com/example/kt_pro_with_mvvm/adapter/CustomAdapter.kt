@@ -32,16 +32,16 @@ class CustomAdapter(private val mList: List<ItemsViewModel>, val context: Contex
         holder.imageView.setImageResource(ItemsViewModel.image)
         holder.textView.text = ItemsViewModel.text
 
-        holder.llayout.setOnClickListener(View.OnClickListener {
+     //   holder.llayout.setOnClickListener(View.OnClickListener {
 
-            Toast.makeText(context, "item_count: $position", Toast.LENGTH_SHORT).show()
+   //         Toast.makeText(context, "item_count: $position", Toast.LENGTH_SHORT).show()
 
-            if (position == 2) {
-                val intent = Intent(context, SeekBarActivity::class.java)
-                context.startActivity(intent)
-            }
+//            if (position == 2) {
+//                val intent = Intent(context, SeekBarActivity::class.java)
+//                context.startActivity(intent)
+//            }
 
-        })
+ //       })
 
     }
 
@@ -52,7 +52,7 @@ class CustomAdapter(private val mList: List<ItemsViewModel>, val context: Contex
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val imageView: ImageView = itemView.findViewById(R.id.imageview)
         val textView: TextView = itemView.findViewById(R.id.textView)
-        val llayout: LinearLayout = itemView.findViewById(R.id.linnearWay)
+     //   val llayout: LinearLayout = itemView.findViewById(R.id.linnearWay)
 
     }
 }
