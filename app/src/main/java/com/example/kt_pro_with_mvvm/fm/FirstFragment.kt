@@ -16,7 +16,8 @@ import com.example.kt_pro_with_mvvm.models.ItemsViewModel
 class FirstFragment(emails: String?, passw: String?) : Fragment() {
     var e = emails.toString()
     var p = passw.toString()
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? { val view = inflater.inflate(R.layout.fragment_first, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?):
+            View? { val view = inflater.inflate(R.layout.fragment_first, container, false)
         inilization(view)
         return view
     }

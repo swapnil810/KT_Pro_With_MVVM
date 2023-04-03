@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
     <!-- github token =  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 -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Required only when requesting background location access on Android 10 (API level 29)-->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KT_Pro_With_MVVM"
         tools:targetApi="31">
+        <activity
+            android:name=".activity.CurrentLocationActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.SeekBarActivity"
             android:exported="false" />

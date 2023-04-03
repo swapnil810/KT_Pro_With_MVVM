@@ -1,38 +1,4 @@
-<!--
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:layout_marginBottom="@dimen/dp_5"
-    app:cardElevation="6dp">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:id="@+id/linnearWay"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp">
-
-        <ImageView
-            android:id="@+id/imageview"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="15dp"
-            android:text="Item"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-</androidx.cardview.widget.CardView>-->
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -49,7 +15,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:layout_editor_absoluteX="10dp"
         tools:layout_editor_absoluteY="10dp">
 
@@ -58,26 +24,38 @@
             android:id="@+id/imageview"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/baseline_5k_24"
             card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent" />
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.32999998" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato_bold"
-            android:text="kode"
+            android:text="SBILIFE"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
             card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toStartOf="@+id/imageview"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="@+id/isiPertanyaan"
+            card_view:layout_constraintTop_toBottomOf="@+id/isiPertanyaan" />
+
+        <TextView
+            android:id="@+id/isiPertanyaan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="SBILIFE"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            card_view:layout_constraintBottom_toTopOf="@+id/textView"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/imageview"
             card_view:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/isiPertanyaan"
-        android:layout_width="57dp"
-        android:layout_height="wrap_content"
-        android:text="isi" />
+
 
 </androidx.cardview.widget.CardView>

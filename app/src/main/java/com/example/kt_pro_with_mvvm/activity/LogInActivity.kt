@@ -16,6 +16,14 @@ class LogInActivity : AppCompatActivity() {
         logInBinding.inputFirst.setText("").toString()
         logInBinding.inputSec.setText("").toString()
         clickFunction()
+        location()
+    }
+
+    private fun location() {
+        logInBinding.getCurrentLocation.setOnClickListener {
+            val intent = Intent(this, CurrentLocationActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun clickFunction() {
@@ -23,9 +31,11 @@ class LogInActivity : AppCompatActivity() {
             val user_name = logInBinding.inputFirst.text
             val password = logInBinding.inputSec.text
             val intent = Intent(this, HomeActivity::class.java)
-            intent.putExtra("email",user_name.toString())
-            intent.putExtra("pass",password.toString())
+            intent.putExtra("email", user_name.toString())
+            intent.putExtra("pass", password.toString())
             startActivity(intent)
         }
     }
+
+
 }

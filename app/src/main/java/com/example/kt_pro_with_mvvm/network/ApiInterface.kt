@@ -7,4 +7,9 @@ import retrofit2.http.GET
 interface ApiInterface {
     @GET("unknown")
     fun getData(): Call<FeatchSimpleData>
+
+    //https://reqres.in/
+    //https://reqres.in/api/users?page=2
+    @GET("https://reqres.in/api/unknown")
+    fun getDataPage(): Call<FeatchSimpleData>
 }
