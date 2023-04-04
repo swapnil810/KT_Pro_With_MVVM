@@ -21,7 +21,7 @@ class LogInActivity : AppCompatActivity() {
 
     private fun location() {
         logInBinding.getCurrentLocation.setOnClickListener {
-            val intent = Intent(this, CurrentLocationActivity::class.java)
+            val intent = Intent(this, MapActivity::class.java)
             startActivity(intent)
         }
     }
