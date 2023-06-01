@@ -14,6 +14,7 @@ class MvvmFragment : Fragment() {
         fun newInstance() = MvvmFragment()
     }
 
+    // add new changes
     private lateinit var viewModel: MvvmViewModel
 
     override fun onCreateView(
@@ -24,7 +25,9 @@ class MvvmFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MvvmViewModel::class.java)
-        // TODO: Use the ViewModel
+
+
+
     }
 
 }
