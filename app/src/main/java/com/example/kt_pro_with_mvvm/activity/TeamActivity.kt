@@ -8,5 +8,10 @@ class TeamActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_team)
+        //comments added
+    }
+
+    override fun onStart() {
+        super.onStart()
     }
 }
