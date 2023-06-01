@@ -10,6 +10,7 @@ class TeamActivity : AppCompatActivity() {
         setContentView(R.layout.activity_team)
         //comments added
         //swa
+        // oncreate
     }
 
     override fun onStart() {
