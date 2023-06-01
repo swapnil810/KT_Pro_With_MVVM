@@ -13,5 +13,16 @@ class TeamActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        //swapnil
+
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+    }
+
+    override fun onResume() {
+        super.onResume()
     }
 }
